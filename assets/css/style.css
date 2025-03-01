@@ -280,7 +280,7 @@ footer {
         padding: 0;
     }
 
-    .teacher-img { max-width: 200px; } /* Mobil uchun kichraytirish */
+    .teacher-img { max-width: 100%; } /* Mobil uchun kichraytirish */
 
     form input, form textarea {
         font-size: 14px;
