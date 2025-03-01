@@ -139,7 +139,7 @@ nav ul li a:hover {
 
 .teacher-img {
     width: 100%; /* Ekranga mos kelishi uchun */
-    max-width: 300px; /* Maksimal o‘lcham */
+    max-width: 100%; /* Maksimal o‘lcham */
     height: auto; /* Proportsiyani saqlash */
     display: block; /* Matn bilan chirmashmasligi uchun */
     margin: 0 auto; /* Markazga joylash */
