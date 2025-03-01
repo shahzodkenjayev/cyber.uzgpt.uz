@@ -21,7 +21,7 @@
         </div>
 
         <div class="right">
-        <img src="http://localhost/cyber/assets/images/teacher.png" alt="O‘qituvchi" class="teacher-img">
+        <img src="http://localhost/cyber/assets/images/teacher1.JPG" alt="O‘qituvchi" class="teacher-img">
         <!-- <img src="http://localhost/cyber/assets/images/teacher1.jpg" alt="Rasm topilmadi"> -->
         </div>
 
