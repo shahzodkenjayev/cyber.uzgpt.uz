@@ -1,0 +1,369 @@
+/* Umumiy sahifa stili */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/cyber2.jpg'); /* Orqa fon rasmi */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ekranni to‘liq qoplash */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header qismi */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: white;
+}
+
+
+.header h1 {
+    color: white; /* Odatda oq rang */
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.header:hover h1 {
+    color: gold; /* Hoverda oltin rang */
+}
+
+
+/* header {
+    
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+} */
+
+/* Navigatsiya menyusi */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: gold; /* Oltin rang */
+    text-decoration: underline; /* Pastiga chiziq chiqishi (ixtiyoriy) */
+}
+
+/* Kontent qismi */
+.container {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    justify-content: space-between;
+    align-items: flex-start;
+    /* max-width: 1300px; */
+    margin-right: 30px;
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Oq rangli matn */
+.white-text {
+    color: white;
+    margin-left: 80px;
+}
+
+/* Telefon raqamiga bosganda qo‘ng‘iroq qilish */
+.phone-link {
+    color: white; /* Moviy rang */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.phone-link:hover {
+    color: white; /* Qoramtir moviy */
+    text-decoration: underline;
+}
+
+
+.email-link {
+    color: white; /* Moviy rang */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email-link:hover {
+    color: white; /* Qoramtir moviy */
+    text-decoration: underline;
+}
+
+.telegram-link {
+    color: white; /* Moviy rang */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.telegram-link:hover {
+    color: white; /* Qoramtir moviy */
+    text-decoration: underline;
+}
+
+
+/* Chap qism - Aloqa formasi */
+.left {
+     
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* O‘ng qism - O‘qituvchi haqida ma‘lumot */
+.right {
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+
+.teacher-img {
+    width: 100%; /* Ekranga mos kelishi uchun */
+    max-width: 300px; /* Maksimal o‘lcham */
+    height: auto; /* Proportsiyani saqlash */
+    display: block; /* Matn bilan chirmashmasligi uchun */
+    margin: 0 auto; /* Markazga joylash */
+}
+.teacher-info {
+    flex: 1; /* Matn qismi rasm yonida joylashadi */
+    color: white;
+}
+
+
+/* Forma uslubi */
+form input, form textarea {
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+/* Xarita qismi */
+.map-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.map-container h2 {
+    /*color: #333;*/
+}
+
+/* Footer har doim pastda bo‘lishi uchun */
+footer {
+
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons .icon {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons .icon:hover {
+    color: #FFD700; /* Oltin rang */
+}
+
+.course-card {
+    color: white;
+    /* background-color: #FFD700; Qorong‘i fon */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Tugmalarni pastga joylashtirish */
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    
+    
+    
+    
+    height: 100%; /* Kartalarni bir xil balandlikda qilish */
+    min-height: 210px; /* Minimal balandlik */
+}
+
+.course-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    flex-grow: 1; /* Matn bir tekis to‘ldirish uchun */
+}
+
+.course-card a {
+    display: block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+
+.course-card:hover{
+
+    color: #FFD700;
+}
+
+
+/* 📌 RESPONSIVE (Mobil qurilmalar uchun) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap; /* Katta ekranda ham, mobil ekranda ham qator bo‘lib chiqadi */
+    }
+    nav ul li a {
+        font-size: 14px; /* Kichik ekranda matnni biroz kichraytirish */
+        padding: 5px 8px;
+    }
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .left, .right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .teacher-img { max-width: 200px; } /* Mobil uchun kichraytirish */
+
+    form input, form textarea {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+@media (min-width: 1024px) { 
+    .teacher-img { max-width: 200px; } /* Katta ekran uchun */
+}
+/* Juda katta ekranlar (6000px dan katta) */
+@media (min-width: 6000px) {
+    .container {
+        grid-template-columns: repeat(10, 1fr); /* 10 ta kurs bir qatorda */
+    }
+}
+
+/* 4000px - 5999px */
+@media (min-width: 4000px) and (max-width: 5999px) {
+    .container {
+        grid-template-columns: repeat(9, 1fr); /* 9 ta kurs bir qatorda */
+    }
+}
+
+/* 3000px - 3999px */
+@media (min-width: 3000px) and (max-width: 3999px) {
+    .container {
+        grid-template-columns: repeat(8, 1fr); /* 8 ta kurs bir qatorda */
+    }
+}
+
+/* 2500px - 2999px */
+@media (min-width: 2500px) and (max-width: 2999px) {
+    .container {
+        grid-template-columns: repeat(7, 1fr); /* 7 ta kurs bir qatorda */
+    }
+}
+
+/* 2000px - 2499px */
+@media (min-width: 2000px) and (max-width: 2499px) {
+    .container {
+        grid-template-columns: repeat(6, 1fr); /* 6 ta kurs bir qatorda */
+    }
+}
+
+/* 1600px - 1999px */
+@media (min-width: 1600px) and (max-width: 1999px) {
+    .container {
+        grid-template-columns: repeat(5, 1fr); /* 5 ta kurs bir qatorda */
+    }
+}
+
+/* 1300px - 1599px */
+@media (min-width: 1300px) and (max-width: 1599px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr); /* 4 ta kurs bir qatorda */
+    }
+}
+
+/* 1000px - 1299px */
+@media (min-width: 1000px) and (max-width: 1299px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* 3 ta kurs bir qatorda */
+    }
+}
+
+/* 700px - 999px */
+@media (min-width: 700px) and (max-width: 999px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 ta kurs bir qatorda */
+    }
+}
+
+/* 700px dan kichik ekranlar */
+@media (max-width: 699px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr); /* 1 ta kurs bir qatorda */
+    }
+}
