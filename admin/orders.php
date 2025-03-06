@@ -5,8 +5,8 @@ $result = $conn->query("SELECT orders.id, users.name, orders.course_name, orders
     FROM orders 
     JOIN users ON orders.user_id = users.id 
     ORDER BY orders.order_date DESC");
-
 ?>
+
 <!DOCTYPE html>
 <html lang="uz">
 <head>
@@ -27,8 +27,8 @@ $result = $conn->query("SELECT orders.id, users.name, orders.course_name, orders
             <tr>
                 <td><?= $row['id'] ?></td>
                 <td><?= $row['name'] ?></td>
-                <td><?= $row['title'] ?></td>
-                <td><?= $row['created_at'] ?></td>
+                <td><?= $row['course_name'] ?></td> <!-- 'title' emas, 'course_name' -->
+                <td><?= $row['order_date'] ?></td> <!-- 'created_at' emas, 'order_date' -->
             </tr>
         <?php endwhile; ?>
     </table>
