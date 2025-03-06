@@ -2,7 +2,18 @@
 require __DIR__ . "/config/config.php";
 session_start();
 
-// Telegramdan kelgan ma'lumotlarni tekshirish
+$client_id = "YOUR_GOOGLE_CLIENT_ID";
+$redirect_uri = "https://yourdomain.com/google_callback.php";
+
+$google_login_url = "https://accounts.google.com/o/oauth2/auth?" . http_build_query([
+    "client_id" => $client_id,
+    "redirect_uri" => $redirect_uri,
+    "response_type" => "code",
+    "scope" => "email profile",
+    "access_type" => "offline"
+]);
+
+// Telegram orqali kirish
 if (isset($_GET['id']) && isset($_GET['hash'])) {
     $telegram_id = $_GET['id'];
     $first_name = $_GET['first_name'] ?? '';
@@ -21,8 +32,7 @@ if (isset($_GET['id']) && isset($_GET['hash'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $user['username'] ?? $first_name;
 
-        // Tizimga kirgandan keyin yo‘naltirish
-        header("Location: buy.php"); // yoki "index.php"
+        header("Location: buy.php");
         exit();
     } else {
         // Foydalanuvchini bazaga qo‘shamiz
@@ -33,13 +43,39 @@ if (isset($_GET['id']) && isset($_GET['hash'])) {
             $_SESSION['user_id'] = $conn->insert_id;
             $_SESSION['user_name'] = $username ?: $first_name;
 
-            header("Location: buy.php"); // yoki "index.php"
+            header("Location: buy.php");
             exit();
         } else {
             echo "<p style='color:red;'>Tizimga kirishda xatolik yuz berdi.</p>";
         }
     }
-} else {
-    echo "<p style='color:red;'>Telegram ma'lumotlari noto‘g‘ri!</p>";
-}
+} 
 ?>
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tizimga kirish</title>
+</head>
+<body>
+    <h2>Tizimga kirish</h2>
+
+    <!-- Gmail orqali kirish tugmasi -->
+    <a href="<?= $google_login_url ?>">
+        <button style="background-color: #db4437; color: white; padding: 10px; border: none; cursor: pointer;">
+            Gmail orqali kirish
+        </button>
+    </a>
+
+    <br><br>
+
+    <!-- Telegram orqali kirish tugmasi -->
+    <script async src="https://telegram.org/js/telegram-widget.js?7"
+        data-telegram-login="YOUR_TELEGRAM_BOT_USERNAME"
+        data-size="large"
+        data-auth-url="https://yourdomain.com/login.php"
+        data-request-access="write"></script>
+</body>
+</html>
