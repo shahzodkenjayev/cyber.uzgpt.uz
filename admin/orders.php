@@ -30,6 +30,14 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
+            <div class="admin-header">
+        <h1>Admin Panel</h1>
+        <a href="index.php">Asosiy</a> |
+        <a href="courses.php">Kurslar</a> | 
+        <a href="users.php">Foydalanuvchilar</a> | 
+        <a href="orders.php">Buyurtmalar</a> | 
+        <a href="logout.php">Chiqish</a>
+    </div>
 
 <h2>Buyurtmalar ro‘yxati</h2>
 <table>
