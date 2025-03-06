@@ -20,7 +20,7 @@ $pages = [
     "cyber" => "Cyber Xavfsizlik",
     "devops" => "DevOps",
     "contact" => "Aloqa",
-    "buy" => "Sotib olish",
+    "courses" => "Sotib olish",
     "language" => "Til",
     "logout" => "Chiqish"
 ];
