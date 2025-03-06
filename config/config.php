@@ -21,7 +21,8 @@ $pages = [
     "devops" => "DevOps",
     "contact" => "Aloqa",
     "buy" => "Sotib olish",
-    "language" => "Til"
+    "language" => "Til",
+    "logout" => "Chiqish"
 ];
 ?>
 
