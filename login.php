@@ -13,6 +13,38 @@ $google_login_url = "https://accounts.google.com/o/oauth2/auth?" . http_build_qu
     "access_type" => "offline"
 ]);
 
+
+// Twilio sozlamalari
+require 'vendor/autoload.php'; // Twilio kutubxonasi kerak
+use Twilio\Rest\Client;
+
+$twilio_sid = "AC53cb9db25b87454221438a34e7e20afd";
+$twilio_token = "06ff805ce1ca98568c06380acc876ad2";
+$twilio_phone = "+12543472968"; // Twilio telefon raqami
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['phone'])) {
+    $phone = $_POST['phone'];
+    $otp = rand(10000, 99999); // 5 xonali tasodifiy kod
+    $_SESSION['otp'] = $otp;
+    $_SESSION['phone'] = $phone;
+
+    // SMS yuborish
+    $twilio = new Client($twilio_sid, $twilio_token);
+    try {
+        $twilio->messages->create(
+            $phone,
+            [
+                'from' => $twilio_phone,
+                'body' => "Sizning tasdiqlash kodingiz: $otp"
+            ]
+        );
+        echo "<p style='color:green;'>SMS yuborildi!</p>";
+    } catch (Exception $e) {
+        echo "<p style='color:red;'>Xatolik: " . $e->getMessage() . "</p>";
+    }
+}
+
+
 // Telegram orqali kirish
 if (isset($_GET['id']) && isset($_GET['hash'])) {
     $telegram_id = $_GET['id'];
