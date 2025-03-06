@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="admin-header">
         <h1>Admin Panel</h1>
+        <a href="index.php">Asosiy</a> |
         <a href="courses.php">Kurslar</a> | 
         <a href="users.php">Foydalanuvchilar</a> | 
         <a href="orders.php">Buyurtmalar</a> | 
