@@ -24,6 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+    <div class="admin-header">
+        <h1>Admin Panel</h1>
+        <a href="courses.php">Kurslar</a> | 
+        <a href="users.php">Foydalanuvchilar</a> | 
+        <a href="orders.php">Buyurtmalar</a> | 
+        <a href="logout.php">Chiqish</a>
+    </div>
     <h1>Kurs qo‘shish</h1>
     <form method="POST">
         <label>Kurs nomi:</label>
