@@ -44,6 +44,13 @@ if (isset($_GET['code'])) {
             $name = $user_info['name'];
             $google_id = $user_info['id'];
 
+
+            echo "<pre>";
+print_r($user_info);
+echo "</pre>";
+exit();
+
+
             // Foydalanuvchini bazada qidiramiz (Google ID yoki email orqali)
             $stmt = $conn->prepare("SELECT * FROM users WHERE email = ? OR google_id = ?");
             $stmt->bind_param("ss", $email, $google_id);
