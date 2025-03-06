@@ -64,7 +64,7 @@ if (isset($_GET['id']) && isset($_GET['hash'])) {
 
     <!-- Gmail orqali kirish tugmasi -->
     <a href="<?= $google_login_url ?>">
-        <button style="background-color: #db4437; color: white; padding: 10px; border: none; cursor: pointer;">
+        <button style="background-color: #db4437; color: white; padding: 10px; border: none; cursor: pointer;" class="login-button">
             Gmail orqali kirish
         </button>
     </a>
