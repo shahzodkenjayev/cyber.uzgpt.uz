@@ -199,7 +199,7 @@ form input, form textarea {
     font-size: 16px;
     margin: 10px;
     border-radius: 50px; /* Yonlarini yumaloq qilish */
-    width: 250px; /* To‘liq kenglik */
+    width: 240px; /* To‘liq kenglik */
     max-width: 400px; /* Juda katta ekranda ortiqcha kengayib ketmasin */
     text-align: center;
     font-weight: bold;
