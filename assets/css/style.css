@@ -32,7 +32,12 @@ body {
 .header:hover h1 {
     color: gold; /* Hoverda oltin rang */
 }
-
+header h1 {
+    color: white; /* Oq rang */
+    text-align: center; /* Matnni o'rtaga joylash */
+    font-size: 28px; /* Matn o'lchami */
+    font-weight: bold; /* Matn qalinligi */
+}
 
 /* header {
     
