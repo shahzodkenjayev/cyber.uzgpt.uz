@@ -9,7 +9,7 @@ $query = "
         courses.title AS course_name, 
         orders.order_date 
     FROM orders 
-    JOIN users_telegram ON orders.user_id = users_telegram.telegram_id 
+    JOIN users_telegram ON orders.user_id = users_telegram.id 
     JOIN courses ON orders.course_id = courses.id 
     ORDER BY orders.order_date DESC
 ";
