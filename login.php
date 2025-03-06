@@ -2,8 +2,8 @@
 require __DIR__ . "/config/config.php";
 session_start();
 
-$client_id = "YOUR_GOOGLE_CLIENT_ID";
-$redirect_uri = "https://yourdomain.com/google_callback.php";
+$client_id = "125498252761-k7tdlsv2dmu2dlrgamrvv7qhaf5ablmr.apps.googleusercontent.com";
+$redirect_uri = "https://cyber.uzgpt.uz/google_callback.php";
 
 $google_login_url = "https://accounts.google.com/o/oauth2/auth?" . http_build_query([
     "client_id" => $client_id,
