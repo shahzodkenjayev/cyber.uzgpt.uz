@@ -183,31 +183,32 @@ form input, form textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Butun ekranni egallaydi */
-    flex-direction: column; /* Tugmalar vertikal joylashadi */
+    flex-direction: column;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
+    min-height: 90vh; /* Butun ekranga yaqin joylashish */
+    margin-top: -50px; /* Tugmani biroz tepaga chiqarish */
 }
 
 .login-button {
     background-color: #db4437;
     color: white;
-    padding: 12px 24px;
+    padding: 14px 28px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     margin: 10px;
     border-radius: 50px; /* Yonlarini yumaloq qilish */
-    width: 240px; /* To‘liq kenglik */
-    max-width: 400px; /* Juda katta ekranda ortiqcha kengayib ketmasin */
+    width: 240px;
+    max-width: 350px;
     text-align: center;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .login-button:hover {
-    background-color: #c1351d; /* Hover effekti */
+    background-color: #c1351d;
 }
 
 
