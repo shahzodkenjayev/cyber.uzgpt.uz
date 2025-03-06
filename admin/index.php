@@ -1,21 +1,30 @@
 <?php
-require '../config/config.php';
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ../auth/login.php");
+session_start();
+if (!isset($_SESSION["admin_id"])) {
+    header("Location: login.php");
     exit();
 }
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="uz">
 <head>
+    <meta charset="UTF-8">
     <title>Admin Panel</title>
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <h1>Xush kelibsiz, Admin</h1>
-    <ul>
-        <li><a href="courses.php">Kurslar</a></li>
-        <li><a href="users.php">Foydalanuvchilar</a></li>
-        <li><a href="../auth/logout.php">Chiqish</a></li>
-    </ul>
+    <div class="admin-header">
+        <h1>Admin Panel</h1>
+        <a href="courses.php">Kurslar</a> | 
+        <a href="users.php">Foydalanuvchilar</a> | 
+        <a href="orders.php">Buyurtmalar</a> | 
+        <a href="logout.php">Chiqish</a>
+    </div>
+
+    <div class="container">
+        <h2>Xush kelibsiz, <?= $_SESSION["admin_name"]; ?>!</h2>
+        <p>Admin panelga hush kelibsiz. Bu yerda kurslarni boshqarishingiz mumkin.</p>
+    </div>
 </body>
 </html>
