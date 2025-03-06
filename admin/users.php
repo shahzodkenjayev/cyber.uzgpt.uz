@@ -13,7 +13,16 @@ $result = $conn->query("SELECT * FROM users_telegram");
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <h1>Foydalanuvchilar</h1>
+     <!-- Admin panel sarlavhasi -->
+    <div class="admin-header">
+        <h1>Admin Panel</h1>
+        <a href="courses.php">Kurslar</a> | 
+        <a href="users.php">Foydalanuvchilar</a> | 
+        <a href="orders.php">Buyurtmalar</a> | 
+        <a href="logout.php">Chiqish</a>
+    </div>
+    
+    <h1>Foydalanuvchilar ro'yxati</h1>
    <table border="1">
     <tr>
         <th>ID</th>
