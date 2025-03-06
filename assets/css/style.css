@@ -198,9 +198,16 @@ form input, form textarea {
     cursor: pointer;
     font-size: 16px;
     margin: 10px;
-    border-radius: 5px;
-    width: 90%; /* Mobil ekranda yaxshi ko‘rinish uchun */
-    max-width: 300px; /* Juda katta ekranda ortiqcha kengayib ketmasin */
+    border-radius: 50px; /* Yonlarini yumaloq qilish */
+    width: 100%; /* To‘liq kenglik */
+    max-width: 400px; /* Juda katta ekranda ortiqcha kengayib ketmasin */
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background-color: #c1351d; /* Hover effekti */
 }
 
 
