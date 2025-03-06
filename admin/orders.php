@@ -1,11 +1,11 @@
 <?php
 require __DIR__ . "/../config/config.php";
 
-$result = $conn->query("SELECT orders.id, users.name, courses.title, orders.created_at 
+$result = $conn->query("SELECT orders.id, users.name, orders.course_name, orders.order_date 
     FROM orders 
     JOIN users ON orders.user_id = users.id 
-    JOIN courses ON orders.course_id = courses.id
-    ORDER BY orders.created_at DESC");
+    ORDER BY orders.order_date DESC");
+
 ?>
 <!DOCTYPE html>
 <html lang="uz">
