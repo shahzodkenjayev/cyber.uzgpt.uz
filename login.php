@@ -65,6 +65,7 @@ if (isset($_GET['id']) && isset($_GET['hash'])) {
     <h2>Tizimga kirish</h2>
 
     <!-- Gmail orqali kirish tugmasi -->
+    <div class="center-container">
     <a href="<?= $google_login_url ?>">
         <button style="background-color: #db4437; color: white; padding: 10px; border: none; cursor: pointer;" class="login-button">
             Gmail orqali kirish
@@ -79,5 +80,6 @@ if (isset($_GET['id']) && isset($_GET['hash'])) {
         data-size="large"
         data-auth-url="login.php"
         data-request-access="write"></script>
+        </div>
 </body>
 </html>
