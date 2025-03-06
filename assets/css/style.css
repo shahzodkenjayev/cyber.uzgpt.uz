@@ -188,7 +188,7 @@ form input, form textarea {
     padding: 10px;
     box-sizing: border-box;
     min-height: 90vh; /* Butun ekranga yaqin joylashish */
-    margin-top: -70px; /* Tugmani biroz tepaga chiqarish */
+    margin-top: -90px; /* Tugmani biroz tepaga chiqarish */
 }
 
 .login-button {
@@ -198,7 +198,7 @@ form input, form textarea {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    margin: 5px;
+    margin: 0px;
     border-radius: 50px; /* Yonlarini yumaloq qilish */
     width: 240px;
     max-width: 350px;
