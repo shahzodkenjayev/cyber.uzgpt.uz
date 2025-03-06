@@ -25,10 +25,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_id"])) {
 </head>
 <body>
     <div class="admin-header">
-        <h1>Kurslarni boshqarish</h1>
-        <a href="index.php">Bosh sahifa</a> | 
+        <h1>Admin Panel</h1>
+        <a href="courses.php">Kurslar</a> | 
+        <a href="users.php">Foydalanuvchilar</a> | 
+        <a href="orders.php">Buyurtmalar</a> | 
         <a href="logout.php">Chiqish</a>
     </div>
+        <h1>Kurslarni boshqarish</h1>
+      
+    
 
     <div class="container">
         <h2>Kurslar ro‘yxati</h2>
