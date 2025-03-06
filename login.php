@@ -62,7 +62,7 @@ if (isset($_GET['id']) && isset($_GET['hash'])) {
     <title>Tizimga kirish</title>
 </head>
 <body>
-    <h2>Tizimga kirish</h2>
+    <h2 style="color: white;">Tizimga kirish</h2>
 
     <!-- Gmail orqali kirish tugmasi -->
     <div class="center-container">
