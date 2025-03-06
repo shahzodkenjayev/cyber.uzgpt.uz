@@ -17,6 +17,7 @@
         <ul>
             <?php foreach ($pages as $key => $title) : ?>
                 <li><a href="index.php?page=<?= $key; ?>"><?= $title; ?></a></li>
+                <li><a href="logout.php">Chiqish</a></li>
             <?php endforeach; ?>
         </ul>
     </nav>
