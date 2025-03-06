@@ -177,23 +177,30 @@ form input, form textarea {
     background-color: #218838;
 }
 
+/* Login Kirish tugma */
+
 .center-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Butun ekranni egallaydi */
     flex-direction: column; /* Tugmalar vertikal joylashadi */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .login-button {
     background-color: #db4437;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     cursor: pointer;
     font-size: 16px;
     margin: 10px;
     border-radius: 5px;
+    width: 90%; /* Mobil ekranda yaxshi ko‘rinish uchun */
+    max-width: 300px; /* Juda katta ekranda ortiqcha kengayib ketmasin */
 }
 
 
