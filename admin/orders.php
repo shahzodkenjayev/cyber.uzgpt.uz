@@ -2,49 +2,66 @@
 require __DIR__ . "/../config/config.php";
 
 // Ma'lumotlarni olish
-$query = "
-    SELECT 
-        orders.id, 
-        users_telegram.user_name, 
-        courses.title AS course_name, 
-        orders.order_date 
-    FROM orders 
-    JOIN users_telegram ON orders.user_id = users_telegram.id 
-    JOIN courses ON orders.course_id = courses.id 
-    ORDER BY orders.order_date DESC
-";
+// SQL so‘rov
+$sql = "SELECT 
+            orders.id, 
+            users_telegram.username,  
+            courses.description AS course_name, 
+            orders.course_price, 
+            orders.order_date  
+        FROM orders 
+        JOIN users_telegram ON orders.user_id = users_telegram.id  
+        JOIN courses ON orders.course_id = courses.id 
+        ORDER BY orders.order_date DESC";
 
-$result = $conn->query($query);
+$result = $conn->query($sql);
 
-// Xatolik tekshirish
-if (!$result) {
-    die("So‘rovda xatolik: " . $conn->error);
-}
 ?>
 <!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Buyurtmalar</title>
-    <link rel="stylesheet" href="../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyurtmalar ro‘yxati</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
 </head>
 <body>
-    <h1>Buyurtmalar</h1>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Foydalanuvchi</th>
-            <th>Kurs</th>
-            <th>Sanasi</th>
-        </tr>
-        <?php while ($row = $result->fetch_assoc()): ?>
-            <tr>
-                <td><?= htmlspecialchars($row['id']) ?></td>
-                <td><?= htmlspecialchars($row['user_name']) ?></td>
-                <td><?= htmlspecialchars($row['course_name']) ?></td>
-                <td><?= htmlspecialchars($row['order_date']) ?></td>
-            </tr>
-        <?php endwhile; ?>
-    </table>
+
+<h2>Buyurtmalar ro‘yxati</h2>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Foydalanuvchi</th>
+        <th>Kurs nomi</th>
+        <th>Narx ($)</th>
+        <th>Buyurtma sanasi</th>
+    </tr>
+
+    <?php 
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>{$row['id']}</td>
+                    <td>{$row['username']}</td>
+                    <td>{$row['course_name']}</td>
+                    <td>\${$row['course_price']}</td>
+                    <td>{$row['order_date']}</td>
+                  </tr>";
+        }
+    } else {
+        echo "<tr><td colspan='5'>Hech qanday buyurtma topilmadi.</td></tr>";
+    }
+    ?>
+</table>
+
 </body>
 </html>
+
+<?php
+// Ulanishni yopish
+$conn->close();
+?>
