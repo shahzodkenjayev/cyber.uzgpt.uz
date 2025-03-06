@@ -73,9 +73,9 @@ if (isset($_GET['id']) && isset($_GET['hash'])) {
 
     <!-- Telegram orqali kirish tugmasi -->
     <script async src="https://telegram.org/js/telegram-widget.js?7"
-        data-telegram-login="YOUR_TELEGRAM_BOT_USERNAME"
+        data-telegram-login="cyber_devops_bot"
         data-size="large"
-        data-auth-url="https://yourdomain.com/login.php"
+        data-auth-url="login.php"
         data-request-access="write"></script>
 </body>
 </html>
