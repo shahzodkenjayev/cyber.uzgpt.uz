@@ -52,7 +52,7 @@ if (isset($_GET['hash']) && isset($_GET['id']) && isset($_GET['username'])) {
 
     <!-- Telegram Login tugmasi -->
     <script async src="https://telegram.org/js/telegram-widget.js?7"
-        data-telegram-login="@cyber_devops_bot"
+        data-telegram-login="cyber_devops_bot"
         data-size="large"
         data-auth-url="login.php"
         data-request-access="write">
