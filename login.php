@@ -32,7 +32,7 @@ if (isset($_GET['id']) && isset($_GET['hash'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $user['username'] ?? $first_name;
 
-        header("Location: buy.php");
+        header("Location: https://cyber.uzgpt.uz/index.php?page=courses");
         exit();
     } else {
         // Foydalanuvchini bazaga qo‘shamiz
@@ -43,7 +43,7 @@ if (isset($_GET['id']) && isset($_GET['hash'])) {
             $_SESSION['user_id'] = $conn->insert_id;
             $_SESSION['user_name'] = $username ?: $first_name;
 
-            header("Location: buy.php");
+            header("Location: https://cyber.uzgpt.uz/index.php?page=courses");
             exit();
         } else {
             echo "<p style='color:red;'>Tizimga kirishda xatolik yuz berdi.</p>";
